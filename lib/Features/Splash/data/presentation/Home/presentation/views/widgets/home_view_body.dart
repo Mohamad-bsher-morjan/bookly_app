@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/Splash/data/presentation/Home/presentation/views/widgets/best_seller_list_veiw_item.dart';
+import 'package:bookly_app/Features/Splash/data/presentation/Home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:bookly_app/Features/Splash/data/presentation/Home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/Features/Splash/data/presentation/Home/presentation/views/widgets/featured_list_view.dart';
 import 'package:bookly_app/constants.dart';
@@ -10,22 +10,34 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomAppBar(),
-          FeaturedBooksListView(),
-          const SizedBox(height: 50),
-          Text(
-            'Best Seller ',
-            style: Styles.textStyle18.copyWith(fontFamily: kGTSectraFine),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: CustomAppBar(),
+              ),
+              FeaturedBooksListView(),
+              const SizedBox(height: 50),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Best Seller ',
+                  style: Styles.textStyle18.copyWith(fontFamily: kGTSectraFine),
+                ),
+              ),
+              const SizedBox(height: 20),
+            ],
           ),
-          const SizedBox(height: 20),
-          BestSellerListViewItem(),
-        ],
-      ),
+        ),
+        SliverFillRemaining(child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: BestSellerListView(),
+        )),
+      ],
     );
   }
 }
