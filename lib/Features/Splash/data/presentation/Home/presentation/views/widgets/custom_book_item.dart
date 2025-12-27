@@ -9,7 +9,7 @@ class CustomBookImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height*.3,
-      child: AspectRatio(aspectRatio: 2.7/4,
+      child: AspectRatio(aspectRatio: 2.6/4,
         child: Container(
           decoration:  BoxDecoration(
             borderRadius: BorderRadius.circular(16),

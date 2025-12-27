@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -10,9 +9,10 @@ class BooksAction extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
-        children:const [
+        children: const [
           Expanded(
-            child: CustomButton(text: '19.99€',
+            child: CustomButton(
+              text: '19.99€',
               backgroundColor: Colors.white,
               textColor: Colors.black,
               borderRadius: BorderRadius.only(
@@ -21,10 +21,11 @@ class BooksAction extends StatelessWidget {
               ),
             ),
           ),
-      
+
           Expanded(
-            child: CustomButton(text: 'Free Preview',
-            fontSize: 16,
+            child: CustomButton(
+              text: 'Free Preview',
+              fontSize: 16,
               backgroundColor: Color(0xffEF8262),
               textColor: Colors.white,
               borderRadius: BorderRadius.only(
