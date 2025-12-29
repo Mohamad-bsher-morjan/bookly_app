@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/Features/Home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:bookly_app/Features/Home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/Features/Home/presentation/views/widgets/featured_list_view.dart';
@@ -34,10 +33,12 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: BestSellerListView(),
-        )),
+        SliverFillRemaining(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: BestSellerListView(),
+          ),
+        ),
       ],
     );
   }

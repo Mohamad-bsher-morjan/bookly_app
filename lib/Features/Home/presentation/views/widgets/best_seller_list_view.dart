@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/Features/Home/presentation/views/widgets/best_seller_list_veiw_item.dart';
 import 'package:flutter/material.dart';
 

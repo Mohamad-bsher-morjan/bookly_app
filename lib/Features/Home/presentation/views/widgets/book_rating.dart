@@ -33,4 +33,3 @@ class BookRating extends StatelessWidget {
     );
   }
 }
-
