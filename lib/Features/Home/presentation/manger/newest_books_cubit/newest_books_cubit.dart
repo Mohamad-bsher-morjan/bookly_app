@@ -5,7 +5,7 @@ import 'package:equatable/equatable.dart';
 
 part 'newest_books_state.dart';
 
-class NewsetBooksCubit extends Cubit<NewestBooksState> {
+class NewsetBooksCubit extends Cubit<NewsetBooksState> {
   NewsetBooksCubit(this.homeRepo) : super(NewestBooksInitial());
 
 final HomeRepo homeRepo;
